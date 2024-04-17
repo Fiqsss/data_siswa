@@ -6,7 +6,7 @@
         <div class="mb-3">
             <label for="lembaga" class="form-label">Nama Siswa</label>
 
-            <select class="form-select" id="lembaga" name="lembaga">
+            <select class="form-control" id="lembaga" name="lembaga">
                 <option value="">-- Pilih Lembaga--</option>
                 <option value="latiseducation">Latis Education</option>
                 <option value="tutorindonesia">Tutor Indonesia</option>
