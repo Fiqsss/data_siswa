@@ -1,4 +1,4 @@
-<div class="siswacontainer " style="padding-top: 6rem">
+<div class="siswacontainer ">
     <div class="search mb-5">
         <form action="{{ route('home') }}" method="GET" class="position-relative d-flex justify-content-center px-4"
             style="width: 100%; ">
@@ -8,9 +8,9 @@
         </form>
     </div>
 
-    <div class="buton-select d-flex justify-content-start">
-        <div class="dropdown me-4">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+    <div class="buton-select d-flex justify-content-start mb-3">
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle  me-4 " href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Lembaga
             </a>
@@ -20,8 +20,8 @@
                 <li><a class="dropdown-item" href="{{ route('home', ['lembaga' => 'tutorindonesia']) }}">Tutorindonesia</a></li>
             </ul>
         </div>
-        <a href="{{ route('createsiswa') }}" class="btn btn-primary me-3">Tambah Siswa</a>
-        <a href="{{ route('export.siswa', ['search' => request('search'), 'lembaga' => request('lembaga')]) }}" class="btn btn-success">Export to Excel</a>
+        <a href="{{ route('createsiswa') }}" class="btn btn-primary mx-3"><i class="fas fa-plus-circle"></i> Add</a>
+        <a href="{{ route('export.siswa', ['search' => request('search'), 'lembaga' => request('lembaga')]) }}" class="btn btn-success"><i class="fas fa-file-export"> Excel </i></a>
 
     </div>
     <table class="table mx-auto text-center shadow">
@@ -48,8 +48,9 @@
                     <td><img style="width: 5rem; height:5rem;" src="{{ asset('fotosiswa/' . $siswa->foto) }}"
                             alt=""></td>
                     <td>
-                        <a href="/formeditsiswa/{{ $siswa->id }}" class="btn btn-warning ">Edit</a>
-                        <a href="/deletesiswa/{{ $siswa->id }}" class="btn btn-danger">Delete</a>
+                        <a href="/formeditsiswa/{{ $siswa->id }}" class="btn btn-warning "><i class="fas fa-edit"></i></a>
+                        <a href="/deletesiswa/{{ $siswa->id }}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                        <a href="/detailsiswa/{{ $siswa->id }}" class="btn btn-success"><i class="fas fa-eye"></i></i></a>
                     </td>
                 </tr>
             @endforeach

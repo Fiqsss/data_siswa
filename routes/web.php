@@ -26,6 +26,7 @@ use App\Http\Controllers\ExcelExportController;
 Route::middleware(['auth'])->group(function () {
     Route::get('/export-siswa', [ExcelExportController::class, 'export'])->name('export.siswa');
     Route::get('/', [SiswaController::class, 'index'])->name('home');
+    Route::get('/detailsiswa/{id}', [SiswaController::class, 'detailsiswa'])->name('detailsiswa');
     Route::get('/createsiswa', [SiswaController::class, 'createSiswa'])->name('createsiswa');
     Route::post('/addsiswa', [SiswaController::class, 'addSiswa'])->name('addsiswa');
     Route::get('/deletesiswa/{id}', [SiswaController::class, 'deleteSiswa'])->name('deletesiswa');

@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
         Siswa::create(
             [
                 'lembaga' => 'latiseducation',
@@ -74,13 +73,6 @@ class DatabaseSeeder extends Seeder
                 'nama_siswa' => 'yoyok',
                 'email' => 'yoyok@gmail.com',
                 'foto' => '6.jpg',
-            ],
-        );
-        User::create(
-            [
-                'name' => 'aro',
-                'email' => 'sarofiqs@gmail.com',
-                'password' => '$2y$10$DSWfAEuLoVYQD8ZOxw/jaOoLIZA1iVIj4YSITGauk4vmoZgOLcduG',
             ],
         );
         User::create(

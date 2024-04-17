@@ -130,4 +130,10 @@ class SiswaController extends Controller
         return redirect()->back()->with('error', 'Gagal mengubah data siswa. Silakan coba lagi.');
     }
 
+    public function detailsiswa($id)
+    {
+        $detail = Siswa::find($id);
+        return view('siswa.detailsiswa', ['details' => $detail]);
+    }
+
 }
